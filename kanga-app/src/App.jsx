@@ -1,20 +1,36 @@
-import { useState } from 'react'
-import { Router, Route } from 'feather-router';
 import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import RecipesPage from './pages/RecipesPage';
+import CommunityPage from './pages/CommunityPage';
+import AboutPage from './pages/AboutPage';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <HomePage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: '/recipes',
+      element: <RecipesPage />,
+    },
+    {
+      path: '/community',
+      element: <RecipesPage />,
+    },
+    {
+      path: '/about',
+      element: <RecipesPage />,
+    }
+  ]);
 
   return (
-    <>
-      <Router>
-        <Route path="/" />
-        <Route path="/recipes" />
-        <Route path="/community" />
-        <Route path="/about" />
-      </Router>
-    </>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
 export default App
