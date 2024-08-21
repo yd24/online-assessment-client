@@ -13,9 +13,9 @@ function Navbar(props) {
             <div id="lg-nav" className="flex justify-between p-5">
                 <Link to ='/'>Home</Link>
                 <div className="hidden lg:flex gap-10">
-                    <Link to='/recipes'>Recipes</Link>
-                    <Link to='/community'>Community</Link>
-                    <Link to='/about'>About</Link>
+                    <Link className="hover:text-orange-400" to='/recipes'>Recipes</Link>
+                    <Link className="hover:text-orange-400" to='/community'>Community</Link>
+                    <Link className="hover:text-orange-400" to='/about'>About</Link>
                 </div>
                 <div className="hidden lg:flex gap-10">
                     <p>Search</p>
@@ -33,9 +33,9 @@ function Navbar(props) {
                 </div>
             </div>
             {open &&
-                <div id="mobile-nav" className="lg:hidden flex-col items-center text-center">
-                    <p>Search</p>
-                    <ul>
+                <div id="mobile-nav" className="lg:hidden flex flex-col items-center text-center w-full bg-white pb-14 fixed">
+                    <p className="p-8">Search</p>
+                    <ul className="flex flex-col gap-8">
                         <li><Link to='/recipes'>Recipes</Link></li>
                         <li><Link to='/community'>Community</Link></li>
                         <li><Link to='/about'>About</Link></li>
