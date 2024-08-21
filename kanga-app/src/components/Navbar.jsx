@@ -19,7 +19,9 @@ function Navbar(props) {
                 </div>
                 <div className="hidden lg:flex gap-10">
                     <p>Search</p>
-                    <p>Login</p>
+                    <div className="w-[24px] h-[24px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account</title><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
+                    </div>
                 </div>
                 <div id="mobile-nav-icon" className="lg:hidden w-[24px] h-[24px]" onClick={toggleMobileNav}>
                     {!open 
@@ -33,11 +35,11 @@ function Navbar(props) {
             {open &&
                 <div id="mobile-nav" className="lg:hidden flex-col items-center text-center">
                     <p>Search</p>
-                    <p>Login</p>
                     <ul>
                         <li><Link to='/recipes'>Recipes</Link></li>
                         <li><Link to='/community'>Community</Link></li>
                         <li><Link to='/about'>About</Link></li>
+                        <li>Login / Sign-up</li>
                     </ul>
                 </div>
             }
