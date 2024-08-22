@@ -4,7 +4,7 @@ function Footer(props) {
             <div className="w-full flex bg-orange-400 px-10 py-20">
                 <div className="w-[1600px] mx-auto flex flex-col gap-[80px] lg:flex-row lg:justify-between">
                     <div className="flex flex-col">
-                        <h2 className="font-bold text-white text-xl mb-5">Kangacook</h2>
+                        <h2 className="font-bold text-white text-2xl mb-5">Kangacook</h2>
                         <ul className="flex flex-col gap-1 text-white text-lg">
                             <li>Our Team</li>
                             <li>Privacy</li>
@@ -12,7 +12,7 @@ function Footer(props) {
                         </ul>
                     </div>
                     <div className="flex flex-col">
-                        <h2 className="font-bold text-white text-xl mb-5">Follow us on Social Media!</h2>
+                        <h2 className="font-bold text-white text-2xl mb-5">Follow us on Social Media!</h2>
                         <ul className="flex gap-5">
                             <li>
                                 <a href='https://facebook.com'>
@@ -39,7 +39,7 @@ function Footer(props) {
                         </ul>
                     </div>
                     <div className="w-1/2 lg:w-auto flex flex-col lg:grow-[0.3]">
-                        <h2 className="font-bold text-white text-xl mb-5">Subscribe to our Newsletter</h2>
+                        <h2 className="font-bold text-white text-2xl mb-5">Subscribe to our Newsletter</h2>
                         <input className="px-3 py-2 mb-5" type="text" placeholder="youremail@email.com"/>
                         <button className="md:w-1/3 text-white font-bold p-2 border-2 border-white">Subscribe!</button>
                     </div>
