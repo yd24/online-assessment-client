@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 export default function BaseLayout() {
     return (
-        <div className="flex flex-col">
+        <div>
             <Navbar />
             <main>
                 <Outlet />

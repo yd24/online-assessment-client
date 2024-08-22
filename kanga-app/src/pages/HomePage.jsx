@@ -10,7 +10,7 @@ export default function HomePage(props) {
 
 function HeroSection(props) {
     return (
-        <div className="flex h-[88vh] mb-10 lg:mb-20">
+        <div className="flex min-h-[80vh] lg:max-h-[80vh] mb-10 lg:mb-20">
             <div className="lozad flex lg:w-1/2 flex-col items-center lg:items-start justify-center p-10 lg:pl-14 bg-mobile_hero_1 lg:bg-none bg-cover bg-[center_top_4em] bg-fixed">
                 <h1 className="w-full text-5xl md:text-7xl text-white lg:text-black mb-10">Welcome to <strong className="lg:font-normal lg:text-orange-500">Kangacook!</strong></h1>
                 <p className="text-3xl md:text-3xl text-white lg:text-black mb-5 text-shadow">Bridging the gap between <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">traditional culinary heritage</em> and <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">modern digital needs.</em></p>
