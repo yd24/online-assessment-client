@@ -1,7 +1,5 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
 import '../assets/css/home.css';
+import heroBgUrl from '/img/bg_1.jpg';
 
 export default function HomePage(props) {
     return <>
@@ -13,7 +11,7 @@ export default function HomePage(props) {
 function HeroSection(props) {
     return (
         <div className="flex h-[88vh] mb-10 lg:mb-20">
-            <div className="lg:w-1/2 flex flex-col items-center lg:items-start justify-center p-10 lg:pl-14 bg-mobile_hero_1 lg:bg-none bg-cover bg-[center_top_4em] bg-fixed">
+            <div className="lozad flex lg:w-1/2 flex-col items-center lg:items-start justify-center p-10 lg:pl-14 bg-mobile_hero_1 lg:bg-none bg-cover bg-[center_top_4em] bg-fixed">
                 <h1 className="w-full text-5xl md:text-7xl text-white lg:text-black mb-10">Welcome to <strong className="lg:font-normal lg:text-orange-500">Kangacook!</strong></h1>
                 <p className="text-3xl md:text-3xl text-white lg:text-black mb-5 text-shadow">Bridging the gap between <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">traditional culinary heritage</em> and <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">modern digital needs.</em></p>
                 <p className="w-full text-xl md:text-xl text-white lg:text-black mb-14 lg:mb-10 text-shadow">Share, discover, and recreate authentic Asian recipes using local ingredients!</p>
@@ -22,8 +20,7 @@ function HeroSection(props) {
                     <button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">Join our community</button>
                 </div>
             </div>
-            <div className="hidden w-1/2 lg:flex bg-hero_1 bg-cover bg-center">
-            </div>
+            <img className="hidden lg:flex w-1/2 object-cover bg-orange-400" loading="lazy" src={heroBgUrl} alt="Asian noodles in a bowl" />
         </div>
     );
 }

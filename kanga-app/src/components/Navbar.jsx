@@ -14,7 +14,7 @@ function Navbar(props) {
         <div id="navigation-menu" className="w-full bg-white flex flex-col items-between sticky top-0">
             <div id="lg-nav" className="flex justify-between items-center px-10 lg:px-32 py-4 lg:py-3">
                 <div className="text-lg lg:flex items-center gap-10">
-                    <Link to ='/'><img className="h-[50px] lg:h-[60px] mr-5" src={logoUrl} /></Link>
+                    <Link to ='/'><img className="h-[50px] lg:h-[60px] mr-5" src={logoUrl} alt="Kangacook logo" /></Link>
                     <Link className="hidden lg:block hover:text-orange-400" to='/recipes'>Recipes</Link>
                     <Link className="hidden lg:block hover:text-orange-400" to='/community'>Community</Link>
                     <Link className="hidden lg:block hover:text-orange-400" to='/about'>About</Link>
