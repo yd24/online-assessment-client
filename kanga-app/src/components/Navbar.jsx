@@ -9,7 +9,7 @@ function Navbar(props) {
     };
 
     return (
-        <div id="navigation-menu" className="max-w-[1600px] flex flex-col mx-auto items-between">
+        <div id="navigation-menu" className="w-full bg-white flex flex-col px-5 lg:px-10 items-between fixed">
             <div id="lg-nav" className="flex justify-between p-5">
                 <Link to ='/'>Home</Link>
                 <div className="hidden lg:flex gap-10">
@@ -33,7 +33,7 @@ function Navbar(props) {
                 </div>
             </div>
             {open &&
-                <div id="mobile-nav" className="lg:hidden flex flex-col items-center text-center w-full bg-white pb-10 fixed">
+                <div id="mobile-nav" className="lg:hidden flex flex-col items-center text-center w-full bg-white pb-10 sticky top-10">
                     <p className="p-8">Search</p>
                     <ul className="flex flex-col gap-8">
                         <li><Link to='/recipes'>Recipes</Link></li>
