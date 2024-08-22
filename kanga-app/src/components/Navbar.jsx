@@ -11,15 +11,15 @@ function Navbar(props) {
     };
 
     return (
-        <div id="navigation-menu" className="w-full bg-white flex flex-col px-5 lg:px-10 items-between sticky top-0">
-            <div id="lg-nav" className="flex justify-between items-center p-4 lg:p-3">
-                <Link to ='/'><img className="h-[60px]" src={logoUrl} /></Link>
-                <div className="hidden text-lg lg:flex gap-10">
-                    <Link className="hover:text-orange-400" to='/recipes'>Recipes</Link>
-                    <Link className="hover:text-orange-400" to='/community'>Community</Link>
-                    <Link className="hover:text-orange-400" to='/about'>About</Link>
+        <div id="navigation-menu" className="w-full bg-white flex flex-col items-between sticky top-0">
+            <div id="lg-nav" className="flex justify-between items-center px-10 lg:px-32 py-4 lg:py-3">
+                <div className="text-lg lg:flex items-center gap-10">
+                    <Link to ='/'><img className="h-[50px] lg:h-[60px] mr-5" src={logoUrl} /></Link>
+                    <Link className="hidden lg:block hover:text-orange-400" to='/recipes'>Recipes</Link>
+                    <Link className="hidden lg:block hover:text-orange-400" to='/community'>Community</Link>
+                    <Link className="hidden lg:block hover:text-orange-400" to='/about'>About</Link>
                 </div>
-                <div className="hidden lg:flex gap-10 text-lg">
+                <div className="hidden text-lg lg:flex items-center gap-5">
                     <p>Search</p>
                     <div className="w-[32px] h-[32px]">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account</title><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
