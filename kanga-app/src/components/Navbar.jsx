@@ -1,14 +1,19 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import logoUrl from '/img/kangacook_logo.svg';
 
 function Navbar(props) {
     const [open, setOpen] = useState(false);
+    let location = useLocation();
 
     const toggleMobileNav = (e) => {
         setOpen(!open);
     };
+
+    useEffect(() => {
+        setOpen(false);
+    }, [location])
 
     return (
         <div id="navigation-menu" className="w-full bg-white flex flex-col items-between sticky top-0">
