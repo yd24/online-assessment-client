@@ -5,10 +5,8 @@ import '../assets/css/home.css';
 
 export default function HomePage(props) {
     return <>
-        <Navbar />
         <HeroSection />
         <RecipesSection />
-        <Footer />
     </>
 }
 
