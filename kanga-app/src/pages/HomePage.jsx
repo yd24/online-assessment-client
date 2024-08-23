@@ -1,10 +1,27 @@
+import { useState, useEffect } from 'react';
+import getRecipes from '../api/getRecipes';
+
 import '../assets/css/home.css';
 import heroBgUrl from '/img/bg_1.jpg';
+import RecipeCard from '../components/RecipeCard';
 
 export default function HomePage(props) {
+    const [trendingRecipes, setTrendingRecipes] = useState([]);
+    
+    useEffect(() => {
+        const fetchRecipes = async () => {
+            const data = await getRecipes();
+            data.sort((a, b) => b.view_count - a.view_count);
+            setTrendingRecipes(data.slice(0, 4));
+        };
+
+        fetchRecipes()
+        .catch(console.error);
+    }, []);
+
     return <>
         <HeroSection />
-        <RecipesSection />
+        <RecipesSection trendingRecipes={trendingRecipes}/>
     </>
 }
 
@@ -29,24 +46,11 @@ function RecipesSection(props) {
     return (
         <div className="max-w-[1600px] mx-auto mb-10">
             <h2 className="flex justify-center text-3xl lg:text-4xl mb-5 lg:mb-10">Trending Recipes</h2>
-            <div className="flex flex-wrap justify-center md:justify-start gap-10 md:gap-20 px-10 py-5">
+            <div className="flex flex-wrap justify-center gap-10 md:gap-20 px-10 py-5">
                 {
-                    [...Array(5)].map((ele, idx) => <RecipeCard key={idx} />)
+                    props.trendingRecipes.map((ele, idx) => <RecipeCard key={idx} recipe={ele} />)
                 }
             </div>
         </div>
     );
-}
-
-function RecipeCard(props) {
-    return (
-        <div className="flex flex-col">
-            <div className="w-72 h-72 bg-red-300">
-                <img src='' alt='' />
-            </div>
-            <div className="py-3">
-                <p className="text-lg">Recipe Card 1</p>
-            </div>
-        </div>
-    )
 }
