@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import getRecipes from '../api/getRecipes';
 
 import '../assets/css/home.css';
@@ -33,8 +34,8 @@ function HeroSection(props) {
                 <p className="text-3xl md:text-3xl text-white lg:text-black mb-5 text-shadow">Bridging the gap between <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">traditional culinary heritage</em> and <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">modern digital needs.</em></p>
                 <p className="w-full text-xl md:text-xl text-white lg:text-black mb-14 lg:mb-10 text-shadow">Share, discover, and recreate authentic Asian recipes using local ingredients!</p>
                 <div className=" md:w-full flex flex-col md:flex-row gap-10">
-                    <button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">See Recipes</button>
-                    <button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">Join our community</button>
+                    <Link to="./recipes" ><button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">See Recipes</button></Link>
+                    <Link to="./about" ><button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">Join our community</button></Link>
                 </div>
             </div>
             <img className="hidden lg:flex w-1/2 object-cover bg-orange-400" loading="lazy" src={heroBgUrl} alt="Asian noodles in a bowl" />
