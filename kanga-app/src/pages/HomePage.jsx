@@ -33,7 +33,7 @@ function HeroSection(props) {
                 <h1 className="w-full text-5xl md:text-7xl text-white lg:text-black mb-10">Welcome to <strong className="lg:font-normal lg:text-orange-500">Kangacook!</strong></h1>
                 <p className="text-3xl md:text-3xl text-white lg:text-black mb-5 text-shadow">Bridging the gap between <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">traditional culinary heritage</em> and <em className="text-white lg:text-orange-600 font-bold lg:font-normal not-italic">modern digital needs.</em></p>
                 <p className="w-full text-xl md:text-xl text-white lg:text-black mb-14 lg:mb-10 text-shadow">Share, discover, and recreate authentic Asian recipes using local ingredients!</p>
-                <div className=" md:w-full flex flex-col md:flex-row gap-10">
+                <div className=" md:w-full flex flex-col md:flex-row items-center gap-10">
                     <Link to="./recipes" ><button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">See Recipes</button></Link>
                     <Link to="./about" ><button className="text-lg font-semibold md:font-normal bg-orange-400 text-white px-3 py-2">Join our community</button></Link>
                 </div>
