@@ -4,7 +4,6 @@ import updateRecipe from '../api/updateRecipe'
 
 export default function RecipeCard(props) {
     const [currentRecipe, dispatch] = useReducer(reducer, props.recipe);
-    console.log(currentRecipe);
 
     const images = {
         1: '/img/recipes/1.jpg',

@@ -4,6 +4,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
   Route,
+  ScrollRestoration,
  } from 'react-router-dom';
  import { lazy, Suspense } from 'react';
 
@@ -37,7 +38,10 @@ function App() {
   );
 
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
+
   );
 }
 
