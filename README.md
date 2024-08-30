@@ -4,7 +4,8 @@
 
 Example client for online assessment project using Vite, React, TailwindCSS, React-Router, and Axios.
 
-[Deployed Site](https://warm-blancmange-a405eb.netlify.app/)
+[Deployed Site](https://warm-blancmange-a405eb.netlify.app/) 
+(note backend is hosted on free-tier so may take some time to spin up. if content does not show, try refreshing after a minute or so)
 
 ## Features
 * Fully responsive, mobile-first design for a variety of devices.
